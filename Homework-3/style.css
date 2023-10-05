@@ -1,7 +1,4 @@
-.container{
-    display: flex;
-    justify-content: space-around;
-}
+
 .container-horse {
 position: relative;
 display: flex;
@@ -11,8 +8,18 @@ flex-flow: column;
 .container-horse .horse{
     width: 200px;
     height: 100px;
-
+    position: absolute;
+    left:0;
     padding: 70px 0;
+}
+.horse-1{
+    top: 0;
+}
+.horse-2{
+    top: 200px;
+}
+.horse-3{
+    top: 400px;
 }
 .container-horse .horse img{
     width: 100%;
@@ -22,4 +29,15 @@ flex-flow: column;
     height: 100vh;
     background: #000;
     display: inline-block;
+    position: absolute;
+    left: 1200px;
+}
+.winner{
+text-align: center;
+padding-top: 300px;
+font-size: 8rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(71, 71, 107);
+    display: none;
 }
