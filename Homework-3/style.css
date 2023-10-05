@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.container-horse {
+position: relative;
+display: flex;
+flex-flow: column;
+
+}
+.container-horse .horse{
+    width: 200px;
+    height: 100px;
+
+    padding: 70px 0;
+}
+.container-horse .horse img{
+    width: 100%;
+}
+.line{
+    width: 5px;
+    height: 100vh;
+    background: #000;
+    display: inline-block;
+}
