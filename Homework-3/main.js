@@ -13,7 +13,7 @@ let total1 = parseFloat(getComputedStyle(horse1).left);
 let total2 = parseFloat(getComputedStyle(horse2).left);
 let total3 = parseFloat(getComputedStyle(horse3).left);
 final = parseFloat(getComputedStyle(line).left);
-console.log(final);
+
 // function to start the race
 function start() {
   let timer = setInterval(() => {
