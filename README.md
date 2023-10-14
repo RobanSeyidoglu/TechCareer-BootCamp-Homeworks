@@ -11,7 +11,7 @@
     <a href="https://robanseyidoglu.github.io/TechCareer-BootCamp-Homeworks/">
    Demo 
     </a>
-    <span> | </span>
+   
    
  
   </h3>
@@ -29,17 +29,13 @@
 
 <!-- OVERVIEW -->
 
-
-
-
-
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+
 - [JavaScript]
 - [HTML]
 - [CSS]
-
 
 ## Features
 
@@ -48,4 +44,4 @@
 ## Contact
 
 - GitHub [@RobanSeyidoglu](https://github.com/RobanSeyidoglu)
--LinkedIn [@RobanSeyidoglu](https://www.linkedin.com/in/roban-seyidoglu/)
+  -LinkedIn [@RobanSeyidoglu](https://www.linkedin.com/in/roban-seyidoglu/)
