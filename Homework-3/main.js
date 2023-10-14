@@ -50,5 +50,5 @@ function start() {
         winner.textContent = "The Winner Is The Grey Horse";
       }
     }
-  }, 100);
+  }, 50);
 }
