@@ -33,6 +33,7 @@
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
+- [ReactJS]
 - [JavaScript]
 - [HTML]
 - [CSS]
@@ -44,4 +45,4 @@
 ## Contact
 
 - GitHub [@RobanSeyidoglu](https://github.com/RobanSeyidoglu)
-  -LinkedIn [@RobanSeyidoglu](https://www.linkedin.com/in/roban-seyidoglu/)
+- LinkedIn [@RobanSeyidoglu](https://www.linkedin.com/in/roban-seyidoglu/)
