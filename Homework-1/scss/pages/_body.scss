@@ -1,0 +1,233 @@
+@import "../base/breakpoints-mixin";
+body {
+  position: relative;
+}
+.container {
+  display: flex;
+
+  max-width: 100%;
+  .right {
+    max-width: 75rem;
+    padding-top: $primaryPadding;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    .about,
+    .experience,
+    .education,
+    .awards,
+    .skills,
+    .interests {
+      padding-left: 3rem;
+      padding-right: 2rem;
+    }
+    .hr {
+      height: 1px;
+      background-color: #ccc;
+      border: none;
+    }
+    /* Start About Section*/
+    .about {
+      display: flex;
+      flex-flow: column;
+      gap: 0.5rem;
+      .adress {
+        font-size: 1.5rem;
+        color: $primary-color;
+        letter-spacing: -0.5px;
+
+        word-spacing: -3px;
+        margin-bottom: 4rem;
+        a {
+          border-bottom: 2px solid $secondary-color;
+          color: $secondary-color;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+      h1 {
+        font-size: 4rem;
+        color: $header-color;
+        font-family: $bodyFontFamily;
+        font-weight: bold;
+        letter-spacing: -2px;
+        word-spacing: -3px;
+        span {
+          color: $secondary-color;
+        }
+      }
+      p {
+        font-family: $bodyFontFamily;
+        font-size: 1.18rem;
+        color: $primary-color;
+        margin-bottom: 4rem;
+        line-height: 30px;
+      }
+      .social-media {
+        display: flex;
+        gap: 40px;
+
+        align-items: center;
+        margin-bottom: $sectionPadding;
+        a {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $iconColor;
+          &:hover {
+            background-color: $secondary-color;
+          }
+          i {
+            color: white;
+          }
+        }
+      }
+    }
+    /* End About Section*/
+
+    /* Start Experience & Education Section*/
+    .experience,
+    .education {
+      padding-top: $sectionPadding;
+      margin-bottom: $sectionPadding;
+      display: flex;
+      flex-flow: column;
+      gap: 3rem;
+      padding-bottom: 50px;
+      margin-top: 100px;
+
+      h2 {
+        font-size: 2rem;
+        color: $header-color;
+        font-weight: bold;
+      }
+      .box {
+        display: flex;
+        flex-flow: column;
+        .date-header {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          .text {
+            h2 {
+              font-size: 1.5rem;
+              color: $header-color;
+              font-weight: normal;
+              padding-bottom: 10px;
+            }
+            h3 {
+              color: $primary-color;
+              font-size: 1.2rem;
+              padding-bottom: 1.8rem;
+            }
+          }
+          p {
+            font-size: 1.1rem;
+            color: $secondary-color;
+          }
+        }
+        p {
+          max-width: 55rem;
+          color: $primary-color;
+          font-size: 1.1rem;
+          line-height: 25px;
+        }
+      }
+    }
+    /* End Experience & Education Section*/
+
+    /* Start Skills Section*/
+    .skills {
+      padding-top: $sectionPadding;
+      margin-bottom: $sectionPadding;
+      display: flex;
+      flex-flow: column;
+      gap: 2rem;
+      h2 {
+        font-size: 2rem;
+        color: $header-color;
+        font-weight: bold;
+      }
+      h3,
+      p {
+        font-size: 1.2rem;
+        color: $primary-color;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      .icons {
+        display: flex;
+        flex-flow: wrap;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+        color: $primary-color;
+      }
+      .futures {
+        p {
+          font-weight: normal;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    /* End Skills Section*/
+
+    /* Start Interests Section*/
+    .interests {
+      padding-top: $sectionPadding;
+      margin-bottom: $sectionPadding;
+      display: flex;
+      flex-flow: column;
+
+      h2 {
+        font-size: 2rem;
+        color: $header-color;
+        font-weight: bold;
+        padding-bottom: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $primary-color;
+        line-height: 25px;
+        padding-bottom: 10px;
+      }
+    }
+    /* End Interests Section*/
+
+    /* Start Awards Section*/
+    .awards {
+      padding-top: $sectionPadding;
+      margin-bottom: $sectionPadding;
+      h2 {
+        font-size: 2rem;
+        color: $header-color;
+        font-weight: bold;
+        padding-bottom: 3rem;
+      }
+      p {
+        font-size: 1.2rem;
+        color: $primary-color;
+        line-height: 25px;
+        padding-bottom: 10px;
+      }
+    }
+    /* End Awards Section*/
+  }
+
+  @include breakpoint(md) {
+    .right {
+      .experience,
+      .education {
+        .box {
+          .date-header {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

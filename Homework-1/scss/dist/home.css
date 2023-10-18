@@ -1,0 +1,467 @@
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* End Global Rules */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Start Nav Bar*/
+.container .left {
+  width: 16.8rem;
+  display: block;
+}
+.container .left nav {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  background-color: #bd5d38;
+  width: 16.8rem;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.container .left nav .icon {
+  display: flex;
+  flex-flow: column;
+  gap: 7px;
+  display: none;
+}
+.container .left nav .icon span {
+  width: 30px;
+  height: 2px;
+  background-color: #e1b6a5;
+}
+.container .left nav p {
+  display: none;
+}
+.container .left nav .img {
+  max-width: 10rem;
+  cursor: pointer;
+}
+.container .left nav .img img {
+  width: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 8px solid #ca7d60;
+}
+.container .left nav ul {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+.container .left nav ul li a {
+  font-family: "Mulish", sans-serif;
+  font-weight: bold;
+  color: #CFA3A6;
+}
+.container .left nav ul li a:hover {
+  color: rgba(248, 249, 250, 0.7);
+}
+
+/* Start Responsive Nav Bar*/
+@media (max-width: 991.98px) {
+  .container {
+    flex-flow: column;
+  }
+  .container .right .about #social-media {
+    gap: 15px;
+    justify-content: center;
+  }
+  .container .right .about #social-media a {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .container .right .about #social-media a i {
+    font-size: 1rem;
+  }
+  .container .right .about #header {
+    font-size: 8vw;
+  }
+  .container .right .about #adress {
+    font-size: 5vw;
+    line-height: 40px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+  }
+  .container .right .about #adress a {
+    font-size: 5vw;
+  }
+  .container .left {
+    position: fixed;
+    width: 100vw;
+    background-color: #bd5d38;
+  }
+  .container .left nav {
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 5rem;
+    align-items: flex-start;
+    padding: 0 1rem 1rem 1rem;
+    position: relative;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .container .left nav .icon-name {
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    background-color: #bd5d38;
+  }
+  .container .left nav .icon-name p {
+    display: block;
+    color: white;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: "Mulish", sans-serif;
+  }
+  .container .left nav .icon-name .icon {
+    display: flex;
+    padding: 10px;
+    outline: 0.5px solid rgba(204, 204, 204, 0.5);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  .container .left nav .img {
+    display: none;
+  }
+  .container .left nav ul {
+    text-align: start;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    transition: all ease-in-out 0.5s;
+    width: 100%;
+  }
+  .container .left nav ul li a {
+    color: white;
+  }
+  .container .left nav .ul-hide {
+    position: fixed;
+    transform: translateY(-200px);
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    padding-inline-start: 1rem;
+  }
+  .container .left nav .ul-show {
+    transform: initial;
+    top: 80px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background-color: #bd5d38;
+    padding-inline-start: 1rem;
+  }
+}
+/* End Responsive Nav Bar*/
+/* End Nav Bar*/
+body {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  max-width: 100%;
+}
+.container .right {
+  max-width: 75rem;
+  padding-top: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  /* Start About Section*/
+  /* End About Section*/
+  /* Start Experience & Education Section*/
+  /* End Experience & Education Section*/
+  /* Start Skills Section*/
+  /* End Skills Section*/
+  /* Start Interests Section*/
+  /* End Interests Section*/
+  /* Start Awards Section*/
+  /* End Awards Section*/
+}
+.container .right .about,
+.container .right .experience,
+.container .right .education,
+.container .right .awards,
+.container .right .skills,
+.container .right .interests {
+  padding-left: 3rem;
+  padding-right: 2rem;
+}
+.container .right .hr {
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+}
+.container .right .about {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+.container .right .about .adress {
+  font-size: 1.5rem;
+  color: #6c757d;
+  letter-spacing: -0.5px;
+  word-spacing: -3px;
+  margin-bottom: 4rem;
+}
+.container .right .about .adress a {
+  border-bottom: 2px solid #bd5d38;
+  color: #bd5d38;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container .right .about h1 {
+  font-size: 4rem;
+  color: #343A40;
+  font-family: "Cambay", sans-serif;
+  font-weight: bold;
+  letter-spacing: -2px;
+  word-spacing: -3px;
+}
+.container .right .about h1 span {
+  color: #bd5d38;
+}
+.container .right .about p {
+  font-family: "Cambay", sans-serif;
+  font-size: 1.18rem;
+  color: #6c757d;
+  margin-bottom: 4rem;
+  line-height: 30px;
+}
+.container .right .about .social-media {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.container .right .about .social-media a {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #495057;
+}
+.container .right .about .social-media a:hover {
+  background-color: #bd5d38;
+}
+.container .right .about .social-media a i {
+  color: white;
+}
+.container .right .experience,
+.container .right .education {
+  padding-top: 200px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-flow: column;
+  gap: 3rem;
+  padding-bottom: 50px;
+  margin-top: 100px;
+}
+.container .right .experience h2,
+.container .right .education h2 {
+  font-size: 2rem;
+  color: #343A40;
+  font-weight: bold;
+}
+.container .right .experience .box,
+.container .right .education .box {
+  display: flex;
+  flex-flow: column;
+}
+.container .right .experience .box .date-header,
+.container .right .education .box .date-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.container .right .experience .box .date-header .text h2,
+.container .right .education .box .date-header .text h2 {
+  font-size: 1.5rem;
+  color: #343A40;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.container .right .experience .box .date-header .text h3,
+.container .right .education .box .date-header .text h3 {
+  color: #6c757d;
+  font-size: 1.2rem;
+  padding-bottom: 1.8rem;
+}
+.container .right .experience .box .date-header p,
+.container .right .education .box .date-header p {
+  font-size: 1.1rem;
+  color: #bd5d38;
+}
+.container .right .experience .box p,
+.container .right .education .box p {
+  max-width: 55rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+.container .right .skills {
+  padding-top: 200px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+.container .right .skills h2 {
+  font-size: 2rem;
+  color: #343A40;
+  font-weight: bold;
+}
+.container .right .skills h3,
+.container .right .skills p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.container .right .skills .icons {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+.container .right .skills .futures p {
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+.container .right .interests {
+  padding-top: 200px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-flow: column;
+}
+.container .right .interests h2 {
+  font-size: 2rem;
+  color: #343A40;
+  font-weight: bold;
+  padding-bottom: 3rem;
+}
+.container .right .interests p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+.container .right .awards {
+  padding-top: 200px;
+  margin-bottom: 200px;
+}
+.container .right .awards h2 {
+  font-size: 2rem;
+  color: #343A40;
+  font-weight: bold;
+  padding-bottom: 3rem;
+}
+.container .right .awards p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+@media (max-width: 767.98px) {
+  .container .right .experience .box .date-header,
+  .container .right .education .box .date-header {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=home.css.map */

@@ -1,35 +1,60 @@
-// "Tech Career" metnini tersten yazdır
-
-// var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
-
-// var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
-
-//1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
+// 1) "  Çağatay Yıldız" isimli metindeki boşlukları kaldır.    (REPLACE)
+// 2) "cagatay yildiz" kelimesindeki boşlukları temizle ve tüm harfleri büyült ( REPLACE ve UPPER)
+// 3) "******Çağatay Yıldız" isimli metindeki yıldızları kaldır (REPLACE)
+// 4) "Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap (REPLACE)
+// 5) "**Tech Career**" isimli metindeki yıldızları kaldır (REPLACE)
+// 6) "Tech Career" isimli metnin soluna ve sağına 3 yıldız koy. "***Tech Career***" ( Normal toplama operatörü)
+// 7) "Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült (SUBSTRING)
+// 8) "Tech bilişim" kelimelerin ilk harflerini büyült (Substring ve upper)
 
 // 1
 
-let name1 = "Tech Career";
-name1 = name1.split("").reverse().join("");
-console.log(name1);
+let Name1 = "         Çağatay Yıldız";
+Name1 = Name1.trim();
+console.log(Name1);
 
 // 2
 
-var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
-var total = 0;
-for (var i = 0; i < numbers.length; i++) {
-  if (numbers[i] > 0) {
-    total += numbers[i];
-  }
-}
-console.log(total);
+let Name2 = "         Çağatay Yıldız";
+Name2 = Name2.trim().toLocaleUpperCase();
+console.log(Name2);
 
 // 3
-var totalLength = [];
 
-for (var j = 1; j <= 50; j++) {
-  if (j % 5 === 0 || j % 3 === 0) {
-    totalLength.push(j);
-  }
+let Name3 = "******Çağatay Yıldız";
+Name3 = Name3.replaceAll("*", "");
+console.log(Name3);
+
+// 4
+
+let Name4 = "Çağatay  Yıldız";
+Name4 = Name4.replace(" ", "");
+console.log(Name4);
+
+// 5
+
+let Name5 = "**Tech Career**";
+Name5 = Name5.replaceAll("*", "");
+console.log(Name5);
+
+// 6
+
+let Name6 = "Tech Career";
+Name6 = "**" + Name6 + "**";
+console.log(Name6);
+
+// 7
+
+let Name7 = "Tech Career Bilişim teknolojileri";
+Name7 = Name7.substring(Name7.length - 13).toUpperCase();
+console.log(Name7);
+
+// 8
+
+let Name8 = "Tech bilişim";
+let words = Name8.split(" ");
+for (let i = 0; i < words.length; i++) {
+  words[i] = words[i][0].toUpperCase() + words[i].substring(1);
 }
-console.log(totalLength);
-console.log(totalLength.length);
+words = words.join(" ");
+console.log(words);
